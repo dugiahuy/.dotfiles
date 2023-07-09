@@ -1,0 +1,12 @@
+[user]
+	name = Huy Du
+	email = dugiahuy@gmail.com
+[push]
+	default = simple
+[branch]
+	autosetuprebase = always
+[core]
+	editor = vim
+	quotepath = false
+[github]
+	user = dugiahuy
