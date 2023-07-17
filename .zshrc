@@ -8,10 +8,10 @@
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Asdf
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
+. /usr/local/opt/asdf/libexec/asdf.sh
 
 # Fasd
 alias a='fasd -a'        # any
