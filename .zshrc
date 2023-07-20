@@ -17,7 +17,7 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 export PATH="$PATH:$(go env GOPATH)/bin"
 
 # Development ENV
-source ./.env
+source $HOME/dotfiles/.env
 
 # Fasd
 alias a='fasd -a'        # any
