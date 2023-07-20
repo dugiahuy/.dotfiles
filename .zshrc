@@ -11,7 +11,13 @@ source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 # eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
+# . /usr/local/opt/asdf/libexec/asdf.sh
+
+# PATH
+export PATH="$PATH:$(go env GOPATH)/bin"
+
+# Development ENV
+source ./.env
 
 # Fasd
 alias a='fasd -a'        # any
