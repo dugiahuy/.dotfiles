@@ -1,23 +1,21 @@
 # Fig pre block. Keep at the top of this file.
 [[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
-
-# Fig post block. Keep at the bottom of this file.
-[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
-
 # Prezto
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # Homebrew
-# eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Asdf
-# . /usr/local/opt/asdf/libexec/asdf.sh
+. "$HOMEBREW_CELLAR/asdf/$(asdf version | cut -c 2-)/libexec/asdf.sh"
 
 # PATH
-export PATH="$PATH:$(go env GOPATH)/bin"
+# Golang
+export PATH="$(go env GOPATH)/bin:$PATH"
 
 # Development ENV
 source $HOME/dotfiles/.env
+
 
 # Fasd
 alias a='fasd -a'        # any
@@ -28,3 +26,9 @@ alias sd='fasd -sid'     # interactive directory selection
 alias sf='fasd -sif'     # interactive file selection
 alias z='fasd_cd -d'     # cd, same functionality as j in autojump
 alias zz='fasd_cd -d -i' # cd with interactive selection
+
+# Kubernetes
+alias k='kubectl'
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
