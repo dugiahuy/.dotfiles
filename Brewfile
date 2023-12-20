@@ -1,4 +1,3 @@
-tap "derailed/k9s"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 
@@ -8,11 +7,9 @@ brew "gh"
 brew "git"
 brew "lua"
 brew "neovim"
-brew "redis"
 brew "vim"
 brew "wget"
 brew "zsh-syntax-highlighting"
-brew "derailed/k9s/k9s"
 
 cask "fig"
 cask "google-chrome"
